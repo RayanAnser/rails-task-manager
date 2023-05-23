@@ -3,7 +3,7 @@
 <div class= >
 <% @tasks.each do |task| %>
 <div class="form-check">
-  <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault", @task>
+  <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault", <% task[:completed] ? ".checked": "" %>>
   <label class="form-check-label" for="flexCheckDefault">
 </label>
 <%= link_to "#{task.title}", task_path(task.id) %>
